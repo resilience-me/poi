@@ -101,17 +101,16 @@ window.onload = function(){
 
 	web3.eth.getAccounts( function(err, accounts) {
 		if (err) {
-			alert("hehe")
 
 			console.log( err );
 			newNotification( err.message );
 		}
-		alert("hoho")
+		alert(accounts)
 		for (var i in accounts) {
 			var item = document.createElement('option');
 			item.value = accounts[i];
-			item.innerHTML = accounts[i];
-			accountSelector.appendChild( item );
+			item.text = accounts[i];
+			accountSelector.appendChild(item);
 		}
 	});
 
