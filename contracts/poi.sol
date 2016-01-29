@@ -27,7 +27,12 @@ contract poi {
     
     function blockNumber() constant returns(uint){ if (debug) { return blockNum; } return block.number; }
     function numGroups() constant returns(uint){ return numUsers / groupSize;}
-    
+
+  
+  
+    // This is the constructor whose code is
+    // run only when the contract is created.
+
     function poi(){
         debug = true;
         groupSize = 5;
