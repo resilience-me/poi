@@ -104,6 +104,7 @@ window.onload = function(){
 			console.log( err );
 			newNotification( err.message );
 		}
+		alert(accounts)
 		for (var i in accounts) {
 			var item = document.createElement('option');
 			item.value = accounts[i];
