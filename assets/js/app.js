@@ -108,15 +108,8 @@ window.onload = function(){
 		for (var i in accounts) {
 			var item = document.createElement('option');
 			item.value = accounts[i];
-			item.text = accounts[i];
-			alert(item.text)
-			
-			
-			var option = document.createElement("option");
-			option.text = "Text";
-			option.value = "myvalue";
-			var select = document.getElementById("account");
-			select.appendChild(option);
+			item.innerHTML = accounts[i];
+			accountSelector.appendChild( item );
 		}
 	});
 
