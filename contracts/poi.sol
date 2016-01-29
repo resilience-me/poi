@@ -39,6 +39,18 @@ contract poi {
         phase = Phases.Registration;
     }
     
+    
+    // schedule etheruem-alarm-clock to call round() every 40320 blocks (7 days)
+        
+    function round(){
+        startBlock = block.number;
+        registrationBlock = startBlock;
+        commitmentBlock = registrationBlock + 5760*30 - 240; // 24 hours * 30 days - 1 hour
+        validityBlock = commitmentBlock + 20;
+    }
+    
+    
+    
     function register() returns(bool success){
         if ((blockNumber() > registrationBlock) // registation period over
         || (userHash[msg.sender] != bytes32(0))) return; // already registered
