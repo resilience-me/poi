@@ -109,9 +109,9 @@ window.onload = function(){
 			var item = document.createElement('option');
 			item.value = accounts[i];
 			item.text = accounts[i];
-			alert(item)
-
-			accountSelector.appendChild(item);
+			alert(item.text)
+			var textnode = document.createTextNode("Water");  
+			accountSelector.appendChild(textnode);
 		}
 	});
 
