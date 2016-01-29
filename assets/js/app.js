@@ -109,7 +109,7 @@ window.onload = function(){
 			var item = document.createElement('option');
 			item.value = accounts[i];
 			item.text = accounts[i];
-			alert(item)
+			alert("aaa")
 
 			accountSelector.appendChild(item);
 		}
