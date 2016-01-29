@@ -110,8 +110,13 @@ window.onload = function(){
 			item.value = accounts[i];
 			item.text = accounts[i];
 			alert(item.text)
-			var textnode = document.createTextNode("Water");  
-			accountSelector.appendChild(textnode);
+			
+			
+			var option = document.createElement("option");
+			option.text = "Text";
+			option.value = "myvalue";
+			var select = document.getElementById("account");
+			select.appendChild(option);
 		}
 	});
 
