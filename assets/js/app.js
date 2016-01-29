@@ -101,10 +101,12 @@ window.onload = function(){
 
 	web3.eth.getAccounts( function(err, accounts) {
 		if (err) {
+			alert("hehe")
+
 			console.log( err );
 			newNotification( err.message );
 		}
-		alert(accounts)
+		alert("hoho")
 		for (var i in accounts) {
 			var item = document.createElement('option');
 			item.value = accounts[i];
